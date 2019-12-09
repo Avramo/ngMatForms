@@ -1,0 +1,41 @@
+<p>page-todos works!</p>
+
+
+<div class="searchBox">
+    <div>Search</div>
+    <span>Title:</span>
+    <input (input)="searchTitle = $event.target.value" >
+    <span> User Id:</span>
+    <input (input)="searchUsrId = $event.target.value">
+</div>
+
+<div *ngIf="!searchTitle && !searchUsrId; then getAllTodos else getFilteredTodos"></div>    
+
+
+<ng-template #getAllTodos>
+    <div>i am getAllTodos</div>
+    <mat-expansion-panel *ngFor='let td of todosSVC.allTodos' >
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <p>TITLE: {{ td.title }}</p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+            <p>USER ID: {{ td.userId }}</p> 
+            <p>ID: {{ td.id }}</p> 
+            <mat-checkbox labelPosition='after' [checked]="td.completed"> Completed</mat-checkbox>
+    </mat-expansion-panel>
+</ng-template>
+     
+<ng-template #getFilteredTodos>
+    <div>i am getFilteredTodos</div>
+    <mat-expansion-panel *ngFor='let td of todosSVC.allTodos | filterTodos:searchTitle :searchUsrId' >
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <p>TITLE: {{ td.title }}</p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+            <p>USER ID: {{ td.userId }}</p> 
+            <p>ID: {{ td.id }}</p> 
+        <mat-checkbox [checked]="td.completed"> Completed</mat-checkbox>
+    </mat-expansion-panel>
+</ng-template>

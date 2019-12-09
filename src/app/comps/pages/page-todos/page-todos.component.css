@@ -1,0 +1,20 @@
+
+mat-expansion-panel{
+    margin: 3px;
+    color: black;
+    background-color: rgb(62, 130, 255);
+}
+mat-expansion-panel-header{
+    font-family: cursive;
+    font-size: large;
+}
+.searchBox{
+    border: blue solid 2px ; 
+    border-radius: 50px;
+    padding: 10px;
+    margin: 5px;
+    background-color: darkturquoise;
+}
+.searchBox > div{
+    text-align: center;font-size: large;margin: 4px;
+}
