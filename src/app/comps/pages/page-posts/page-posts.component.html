@@ -1,0 +1,20 @@
+
+
+<mat-accordion *ngIf="usersArrived">
+    <mat-expansion-panel *ngFor="let p of postsSVC.data | async">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{p.title}}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{ usersSVC.getFullNameById(p.userId) }}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+    
+        <app-item-post [post]="p"></app-item-post>
+
+    </mat-expansion-panel>
+            
+</mat-accordion>
+
+

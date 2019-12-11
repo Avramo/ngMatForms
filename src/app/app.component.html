@@ -1,18 +1,7 @@
-<!-- class="mat-app-background"  -->
-<body  >
   
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item routerLink='/menu'>Menu</button>
-</mat-menu>
-
-<button mat-button [matMenuTriggerFor]="todos">Todos</button>
-<mat-menu #todos="matMenu">
-  <button mat-menu-item routerLink='/todos'>All Todos</button>
-</mat-menu>
-
+<app-menu></app-menu>
+<div class="spacer70px"></div>
 
 <router-outlet></router-outlet>
 
-</body>
 

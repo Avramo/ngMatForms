@@ -89,6 +89,8 @@ THE SOFTWARE.
 
 @angular/material/button
 
+@angular/material/card
+
 @angular/material/checkbox
 
 @angular/material/datepicker
@@ -96,8 +98,6 @@ THE SOFTWARE.
 @angular/material/dialog
 
 @angular/material/expansion
-
-@angular/material/menu
 
 @angular/material/snack-bar
 

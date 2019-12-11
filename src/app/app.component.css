@@ -1,0 +1,17 @@
+app-menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px 16px;
+    background: #3f51b5;
+    color: #fff;
+    width: 100%;
+}
+.spacer70px{
+    height:70px;
+    
+    
+}
