@@ -1,12 +1,17 @@
 .example-card {
-    max-width: 400px;
-    background: rgba(100,100,100,0.13);
-    color: black;
+  max-width: 400px;
+  background-color: lightseagreen;
+  color: black;
 }
 
 ::ng-deep span.mat-content{
-    color: black;
+  color: black;
   flex-direction: column;
 }
-
+mat-card{
+  background-color: rgb(10, 171, 235,0.15);
+}
+mat-card-subtitle{
+  color: rgb(5, 0, 71);
+}
 

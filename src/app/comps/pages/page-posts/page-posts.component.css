@@ -1,0 +1,10 @@
+mat-expansion-panel/*  ::ng-deep */ {
+    margin: 3px;
+    background-color: skyblue;
+}
+mat-panel-title{
+    color: black;
+}
+mat-panel-description{
+    color: black;
+}

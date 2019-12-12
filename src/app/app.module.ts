@@ -14,6 +14,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { FilterTodosPipe } from './pipes/filter-todos.pipe';
 import { ItemPostComponent } from './comps/items/item-post/item-post.component';
 import { PagePostsComponent } from './comps/pages/page-posts/page-posts.component';
+import { PageCommentsComponent } from './comps/pages/page-comments/page-comments.component';
+import { ItemCommentComponent } from './comps/items/item-comment/item-comment.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { PagePostsComponent } from './comps/pages/page-posts/page-posts.componen
     FilterTodosPipe,
     ItemPostComponent,
     PagePostsComponent,
+    PageCommentsComponent,
+    ItemCommentComponent,
     
 
   ],
