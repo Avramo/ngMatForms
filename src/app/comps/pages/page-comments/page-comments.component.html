@@ -1,9 +1,10 @@
 
 <div>page-comment-works!</div>
 
-
+<!-- 
 <div class="accordion" id="accordionExample">
-        <app-item-comment *ngFor='let comm of commentsSVC.data | async' [comment]="comm"> </app-item-comment>
-</div>
+        <app-item-comment *ngFor='let comm of commentsSVC.data | async' [comment]="comm" > </app-item-comment>
+</div> -->
 
+<app-item-comment *ngFor='let comm of commentsSVC.data | async' [comment]="comm" > </app-item-comment>
 

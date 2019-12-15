@@ -9,7 +9,7 @@ import { SvcCommentsService } from 'src/app/services/svc-comments.service';
 export class PageCommentsComponent implements OnInit {
    
   
-
+  
   constructor(public commentsSVC:SvcCommentsService) { }
 
   ngOnInit() {
