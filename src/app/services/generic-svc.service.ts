@@ -18,13 +18,13 @@ export class GenericSVCService<T> {
     let dynamicItems = localStorage[this.api] ? 
       JSON.parse(localStorage[this.api]) : [];
 
-    let apiItems = this.dataSubject.value
+    let AllItems = this.dataSubject.value
 
     dynamicItems.push(item)
     localStorage[this.api] = JSON.stringify(dynamicItems)
 
-    apiItems.push(item)
-    this.dataSubject.next(apiItems)
+    AllItems.push(item)
+    this.dataSubject.next(AllItems)
   }
   
 }

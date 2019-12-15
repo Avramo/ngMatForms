@@ -1,0 +1,8 @@
+<div>make icon counter here!</div>
+
+<p>page-users works!</p>
+
+<mat-accordion >
+    <app-item-user *ngFor="let usr of usersSVC.data | async" [usr]='usr'></app-item-user>
+</mat-accordion>
+

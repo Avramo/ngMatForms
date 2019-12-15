@@ -3,12 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageTodosComponent } from './comps/pages/page-todos/page-todos.component';
 import { PagePostsComponent } from './comps/pages/page-posts/page-posts.component';
 import { PageCommentsComponent } from './comps/pages/page-comments/page-comments.component';
+import { PageUsersComponent } from './comps/pages/page-users/page-users.component';
+import { AddFormComponent } from './comps/items/add-form/add-form.component';
 
 
 const routes: Routes = [
   {path:'todos' , component:PageTodosComponent},
-  {path:'posts' , component:PagePostsComponent},
+  {path:'posts' , component:PagePostsComponent}, 
   {path:'comments' , component:PageCommentsComponent},
+  {path:'users' , component:PageUsersComponent},
+  {path:'addUserForm' , component:AddFormComponent},
 
   {path:'' , redirectTo:'todos', pathMatch:'full'},
   

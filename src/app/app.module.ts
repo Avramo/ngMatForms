@@ -16,6 +16,9 @@ import { ItemPostComponent } from './comps/items/item-post/item-post.component';
 import { PagePostsComponent } from './comps/pages/page-posts/page-posts.component';
 import { PageCommentsComponent } from './comps/pages/page-comments/page-comments.component';
 import { ItemCommentComponent } from './comps/items/item-comment/item-comment.component';
+import { PageUsersComponent } from './comps/pages/page-users/page-users.component';
+import { ItemUserComponent } from './comps/items/item-user/item-user.component';
+import { AddFormComponent } from './comps/items/add-form/add-form.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { ItemCommentComponent } from './comps/items/item-comment/item-comment.co
     PagePostsComponent,
     PageCommentsComponent,
     ItemCommentComponent,
+    PageUsersComponent,
+    ItemUserComponent,
+    AddFormComponent,
     
 
   ],

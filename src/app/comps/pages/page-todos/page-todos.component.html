@@ -3,10 +3,14 @@
 
 <div class="searchBox">
     <div>Search</div>
-    <span>Title:</span>
-    <input (input)="searchTitle = $event.target.value" >
-    <span> User Id:</span>
-    <input (input)="searchUsrId = $event.target.value">
+    <div>
+        <span> Title:   </span>
+        <input (input)="searchTitle = $event.target.value" >
+    </div>
+    <div>
+        <span>User Id:</span>
+        <input (input)="searchUsrId = $event.target.value">
+    </div>
 </div>
 
 <div *ngIf="!searchTitle && !searchUsrId; then getAllTodos else getFilteredTodos"></div>    

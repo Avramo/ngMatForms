@@ -1,0 +1,67 @@
+<p>add-form works!</p>
+
+<form class="example-container">
+    <mat-form-field>
+        <mat-select [(ngModel)]="selectedformType"  
+            placeholder="Select Item To Add" [ngModelOptions]="{standalone: true}">
+            <mat-option value="user">User</mat-option>
+            <mat-option value="post">Post</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div *ngIf='selectedformType == "user"; then user else post'></div>
+    <ng-template  #user>
+        <form [formGroup]='newUserForm' (ngSubmit)='submitNewItem(newUserForm)'>
+            <mat-form-field>
+                <input matInput placeholder="Name" formControlName='name' name="name">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="id" formControlName='id' name="id">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="username" formControlName='username' name="username">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="email" formControlName='email' name="email">
+            </mat-form-field>
+
+            <button mat-raised-button color="accent">Submit</button>
+        </form> 
+    </ng-template> 
+
+    <ng-template  #post>
+        <form [formGroup]='newPostForm' (ngSubmit)='submitNewItem(newPostForm)'>
+            <mat-form-field>
+                <input matInput placeholder="User Id" formControlName='userId' name="userId">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Post Id" formControlName='id' name="id">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Post Title" formControlName='title' name="title">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Post Body" formControlName='body' name="body">
+            </mat-form-field>
+
+            <button mat-raised-button color="accent">Submit</button>
+        </form>   
+    </ng-template>
+
+</form >
+
+
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- <container-element [ngSwitch]="selectedformType">
+    <some-element *ngSwitchCase="selectedformType == 'user'">
+        
+    </some-element>
+    <some-element *ngSwitchCase="match_expression_2">...</some-element>
+    <some-other-element *ngSwitchCase="match_expression_3">...</some-other-element>
+    <ng-container *ngSwitchCase="match_expression_3">
+      <inner-element></inner-element>
+      <inner-other-element></inner-other-element>
+    </ng-container>
+    <some-element *ngSwitchDefault>...</some-element>
+  </container-element> -->
