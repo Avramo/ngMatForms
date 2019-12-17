@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Route, Router, ActivatedRoute, RoutesRecognized } from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
+import { GenericSVCService } from 'src/app/services/generic-svc.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,9 +10,25 @@ import {MatMenuModule} from '@angular/material/menu';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(public router:Router) { }
+
+  pageTitle:string;
+
+  constructor(public router:Router) {
+    
+
+   }
+
 
   ngOnInit() {
+    this.router.events.subscribe(data =>{
+      console.log('this.router.events = ', data);
+      if (data instanceof RoutesRecognized) {
+        this.pageTitle = data.state.root.firstChild.data.pageName;
+      }
+      console.log(' this.pageTitle = ',  this.pageTitle);
+
+    })
   }
+
 
 }

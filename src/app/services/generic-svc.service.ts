@@ -7,6 +7,8 @@ export class GenericSVCService<T> {
   protected dataSubject:BehaviorSubject<T[]> = new BehaviorSubject<T[]>([])
   data:Observable<T[]> = this.dataSubject.asObservable()
 
+
+
   constructor(private http:HttpClient, private api:string) {
     
     this.api = "https://jsonplaceholder.typicode.com/" + this.api

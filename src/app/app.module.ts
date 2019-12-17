@@ -19,6 +19,7 @@ import { ItemCommentComponent } from './comps/items/item-comment/item-comment.co
 import { PageUsersComponent } from './comps/pages/page-users/page-users.component';
 import { ItemUserComponent } from './comps/items/item-user/item-user.component';
 import { AddFormComponent } from './comps/items/add-form/add-form.component';
+import { UsersCounterComponent } from './comps/items/users-counter/users-counter.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { AddFormComponent } from './comps/items/add-form/add-form.component';
     PageUsersComponent,
     ItemUserComponent,
     AddFormComponent,
+    UsersCounterComponent,
     
 
   ],

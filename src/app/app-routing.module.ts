@@ -8,12 +8,19 @@ import { AddFormComponent } from './comps/items/add-form/add-form.component';
 
 
 const routes: Routes = [
-  {path:'todos' , component:PageTodosComponent},
-  {path:'posts' , component:PagePostsComponent}, 
-  {path:'comments' , component:PageCommentsComponent},
-  {path:'users' , component:PageUsersComponent},
-  {path:'addUserForm' , component:AddFormComponent},
-
+  {path:'todos' , component:PageTodosComponent, data: { pageName: ' Todos'} },
+  {path:'posts' , component:PagePostsComponent,
+    data: { pageName: ' Posts'} 
+  }, 
+  {path:'comments' , component:PageCommentsComponent,
+    data: { pageName: ' Comments'} 
+  }, 
+  {path:'users' , component:PageUsersComponent,
+    data: { pageName: ' Users'} 
+  }, 
+  {path:'addUserForm' , component:AddFormComponent,
+    data: { pageName: ' Form'} 
+  }, 
   {path:'' , redirectTo:'todos', pathMatch:'full'},
   
 ];

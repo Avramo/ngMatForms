@@ -11,6 +11,7 @@ export class PageUsersComponent implements OnInit {
   constructor(public usersSVC:SvcUsersService) { }
 
   ngOnInit() {
+    
   }
 
 }

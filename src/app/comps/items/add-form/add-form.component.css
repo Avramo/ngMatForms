@@ -1,13 +1,28 @@
 form{
-    background-color: grey;
+    background-color: rgb(124, 122, 255);
     color: black;
+    margin: 20px;
 }
 .example-container {
-    display: flex;
-    flex-direction: column;
-  }
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  position: relative;
+  left: 25%;
+  top: 15%;
+}
   
-  .example-container > * {
-    width: 100%;
-  }
-  
+.example-container > * {
+  width: 90%;
+  color: black;
+}
+span , .mat-option {
+  background-color: blueviolet;
+}
+span , .mat-selected{
+  background-color: cyan;
+}
+h2{
+  text-align: center;
+}
